@@ -325,6 +325,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1 {
   font-family: "Raleway", sans-serif;
   text-align: center;
@@ -427,6 +431,18 @@ p {
   background-position: 10px 6px;
 }
 
+.btn--why {
+  padding: 10px 55px 10px 15px;
+  background-image: url("../svg/arrows.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) 6px;
+  background-size: 30px 30px;
+}
+.btn--why:hover {
+  background-size: 30px 30px;
+  background-position: calc(100% - 10px) 6px;
+}
+
 .card {
   background: #ffffff;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.16), 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
@@ -471,6 +487,13 @@ p {
   font-size: 1.75rem;
 }
 
+img.switch {
+  width: 45px;
+  margin-left: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .earth-emoticon--container {
   overflow: hidden;
   width: 500px;
@@ -493,8 +516,8 @@ p {
 .earth-emoticon--container.stick .earth-emoticon--animation {
   animation: none;
   margin-left: -50px;
-  margin-top: -150px;
-  height: 775px;
+  margin-top: -120px;
+  height: 625px;
 }
 .earth-emoticon--container.stick .earth-emoticon--explanation {
   display: block;
@@ -503,18 +526,31 @@ p {
   text-align: center;
   color: #ffffff;
   position: absolute;
-  bottom: 0;
   left: 0;
   text-align: center;
   width: 370px;
+  top: 0;
 }
 .earth-emoticon--container.stick .earth-emoticon--explanation p {
-  font-size: 2em;
   margin-top: 0;
   margin-bottom: 0;
 }
 .earth-emoticon--container.stick .earth-emoticon--explanation img {
   max-width: 100%;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.earth-emoticon--container.stick .earth-emoticon--explanation:first-child p {
+  font-size: 2.25em;
+  margin-top: 15px;
+}
+.earth-emoticon--container.stick .earth-emoticon--explanation ~ .earth-emoticon--explanation {
+  top: auto;
+  bottom: 0;
+}
+.earth-emoticon--container.stick .earth-emoticon--explanation ~ .earth-emoticon--explanation p {
+  font-size: 1.5em;
 }
 .earth-emoticon--container.stick:after {
   content: none;
@@ -624,10 +660,10 @@ p {
 }
 @keyframes earthHandsAnimation {
   0% {
-    transform: rotate(-5deg);
+    transform: rotate(-5deg) scale(0.9, 1);
   }
   100% {
-    transform: rotate(5deg);
+    transform: rotate(5deg) scale(0.9, 1);
   }
 }
 .earth-status {
@@ -642,6 +678,12 @@ p {
   font-family: "Lato", sans-serif;
   margin-top: 3em;
   margin-bottom: 3em;
+}
+
+.help .intro-text p {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .input {
@@ -784,6 +826,11 @@ p {
 .news {
   background-color: #2196F3;
 }
+.news .content__lead p {
+  text-align: left;
+  max-width: none;
+  margin-left: 5em;
+}
 .news h2,
 .news p {
   color: #ffffff;
@@ -839,6 +886,13 @@ footer {
 footer p {
   color: #ffffff;
   text-align: center;
+}
+footer a {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+footer a:hover {
+  color: #2196F3;
 }
 
 .page-head {
@@ -941,6 +995,11 @@ footer p {
 .social-media .content__lead {
   background-color: #388E3C;
 }
+.social-media .content__lead p {
+  text-align: left;
+  max-width: none;
+  margin-left: 5em;
+}
 .social-media .earth-status__text {
   color: #ffffff;
   text-align: center;
@@ -968,6 +1027,9 @@ footer p {
 }
 .social-media .layout__item--full {
   margin: 0;
+}
+.social-media .intro-text {
+  margin: 50px 0 0;
 }
 
 .social-media-widget--twitter iframe {
