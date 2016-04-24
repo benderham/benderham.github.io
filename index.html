@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> </title>
+    <meta name="description" content="">
+    <meta name="author" content="author">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory.-->
+    <!-- Generate new ones, unless your client is Bruce Wayne, in which case move along.-->
+    <!-- http://www.favicomatic.com      -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <meta name="application-name" content="&amp;nbsp;">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+  </head>
+  <body>
+    <header class="page-head">
+      <nav class="page-nav">
+        <ul class="page-nav__list">
+          <li class="page-nav__item"><a href="#overview" class="page-nav__link">Earth</a></li>
+          <li class="page-nav__item"><a href="#nasa" class="page-nav__link">NASA Data</a></li>
+          <li class="page-nav__item logo">NASA - Space Apps Challenge 2016</li>
+          <li class="page-nav__item"><a href="#social" class="page-nav__link">Social Media</a></li>
+          <li class="page-nav__item"><a href="#news" class="page-nav__link">News</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="overview" class="container overview overview--worried">
+      <div class="content">
+        <h1 class="overview__heading visually-hidden">Earth Overview</h1>
+        <div class="layout">
+          <div class="layout__item layout__item--full">
+            <p class="earth-status__text">The Earth is feeling:</p>
+            <div class="earth-emoticon--container">
+              <div class="earth-emoticon--animation earth-emoticon--worried"></div>
+              <div class="earth-emoticon--explanation">
+                <p>Earth’s overall mood</p>
+                <p>Have a listen:</p><img src="http://wallpapercave.com/wp/8nTG8bR.png">
+              </div>
+            </div>
+          </div>
+          <div class="layout__item layout__item--third">
+            <div class="country-selection"><span class="input input--makiko">
+                <input id="input-16" type="text" placeholder=" " class="input__field input__field--makiko">
+                <label for="input-16" class="input__label input__label--makiko"><span class="input__label-content input__label-content--makiko">Search Country</span></label></span></div>
+          </div>
+          <div class="layout__item layout__item--third">
+            <div class="earth-status"><a href="#nasa" class="btn earth-status__btn">Find Out Why</a></div>
+          </div>
+          <div class="layout__item layout__item--third"><a href="" class="btn btn--spotify">Play Mood Soundtrack</a></div>
+        </div>
+      </div>
+    </section>
+    <section id="nasa" class="container nasa">
+      <div class="content__lead">
+        <div class="content">
+          <div class="earth-emoticon--container">
+            <div class="earth-emoticon--animation earth-emoticon--worried"></div>
+          </div>
+          <p>NASA Data</p>
+        </div>
+      </div>
+      <div class="content">
+        <h1 class="visually-hidden">NASA Data</h1>
+        <div class="layout">       
+          <div class="layout__item layout__item--half">
+            <div class="card">
+              <h2 class="card__heading">Rainfall This Month</h2>
+              <canvas id="rainfall-data" class="chart"></canvas>
+              <div class="card__emoticon"></div>
+              <div class="card__content">
+                <h3>
+                   
+                  NASA’s EONET<br>(Earth Observatory Natural Event Tracker)
+                </h3>
+                <p>EONET is a repository of metadata about natural events. The service lists natural event data in real time. By analysing this data NASA can action early warning systems and track natural disasters over time. Less natural disasters is better for life on Earth.</p><a href="" class="btn btn--small">Find out more about EONET</a>
+              </div>
+            </div>
+          </div>
+          <div class="layout__item layout__item--half">
+            <div class="card">
+              <h2 class="card__heading">Temperature This Month</h2>
+              <canvas id="temp-data" class="chart"></canvas>
+              <div class="card__emoticon"></div>
+              <div class="card__content">
+                <h3>Global Imagery Browse Services</h3>
+                <p>This system shows historical and real-time daily global imagery taken from space. The service provides colour pictures and climate data that includes Sea Surface Temperature, Sea Ice Concentration and many other useful data points.</p><a href="" class="btn btn--small">Find out more about GIBS</a>
+              </div>
+            </div>
+          </div>
+          <div class="layout__item layout__item--full">
+            <div class="card">
+              <h2 class="card__heading">Current Natural Disasters</h2>
+              <div class="card__content disaster-map">
+                <iframe src="http://hisz.rsoe.hu/alertmap/index2.php" width="640" height="480" class="layout__iframe--full"></iframe>
+              </div>
+              <div class="card__emoticon"></div>
+              <div class="card__content">
+                <h3>ClimateSERV</h3>
+                <p>ClimateSERV allows scientists and government decision-makers to visualise rainfall data, the condition of global plant life, along with 180-day forecasts of rainfall and temperature.</p><a href="" class="btn btn--small">Find out more about ClimateSERV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="social" class="container social-media">
+      <div class="content__lead">
+        <div class="content">
+          <div class="earth-emoticon--container">
+            <div class="earth-emoticon--animation earth-emoticon--shocked"></div>
+          </div>
+          <p>Social Media</p>
+        </div>
+      </div>
+      <div class="content">
+        <h1 class="visually-hidden">Social Media</h1>
+        <div class="layout">
+          <div class="layout__item layout__item--full">
+            <p>This section analyses real-time social media posts to determine whether or not we’re talking about global issues or mainly focussing on Kardashians.</p>
+          </div>
+          <div class="layout__item layout__item--third social-media-widget--twitter">
+            <a class="twitter-timeline"  href="https://twitter.com/search?q=%23globalwarming%20OR%20%23climatechange%20OR%20%23earthlive%20OR%20%23climate%20or%20%23environment" data-widget-id="723797963131097088">Tweets about #globalwarming OR #climatechange OR #earthlive OR #climate or #environment</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+          <div class="layout__item layout__item--two-thirds">
+            <script src="http://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="http://snapwidget.com/in/?h=Y2xpbWF0ZWNoYW5nZXxpbnwxNjB8NXw0fHxub3w1fG5vbmV8b25TdGFydHxub3x5ZXM=&ve=230416" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;height:600px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="news" class="container news">
+      <div class="content__lead">
+        <div class="content">
+          <div class="earth-emoticon--container">
+            <div class="earth-emoticon--animation earth-emoticon--worried"></div>
+          </div>
+          <p>News Trends</p>
+        </div>
+      </div>
+      <div class="content">
+        <h1 class="visually-hidden">News Trends</h1>
+        <div class="layout">
+          <div class="layout__item layout__item--full intro-text">
+            <p>Here we analyse what news outlets around the world are reporting on. This could include news outlets covering major global issues like Global Warming, carbon emissions taxation, or political news about major decisions that could effect Earth.</p>
+          </div>
+          <div class="layout__item layout__item--full">
+            <div class="card">
+              <h2 class="card__heading">Trends A</h2>
+              <div class="card__content">
+                <script type="text/javascript" src="//www.google.com.au/trends/embed.js?hl=en-US&amp;q=Climate+Change,+Global+Warming,+Environment&amp;date=1/2016+12m&amp;gprop=news&amp;cmpt=q&amp;tz=Etc/GMT-8&amp;tz=Etc/GMT-8&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=920&amp;h=350"></script>
+              </div>
+            </div>
+          </div>
+          <div class="layout__item layout__item--half">
+            <div class="card">
+              <h2 class="card__heading">Trends B</h2>
+              <div class="card__content">
+                <script type="text/javascript" src="//www.google.com.au/trends/embed.js?hl=en-US&amp;q=Climate+Change,+Global+Warming,+Environment&amp;date=1/2016+12m&amp;gprop=news&amp;cmpt=q&amp;tz=Etc/GMT-8&amp;tz=Etc/GMT-8&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=420&amp;h=350"></script>
+              </div>
+            </div>
+          </div>
+          <div class="layout__item layout__item--half">
+            <div class="card">
+              <h2 class="card__heading">Trends C</h2>
+              <div class="card__content">
+                <script type="text/javascript" src="//www.google.com.au/trends/embed.js?hl=en-US&amp;q=Climate+Change,+Global+Warming,+Environment&amp;date=1/2016+12m&amp;gprop=news&amp;cmpt=q&amp;tz=Etc/GMT-8&amp;tz=Etc/GMT-8&amp;content=1&amp;cid=TIMESERIES_GRAPH_0&amp;export=5&amp;w=420&amp;h=350"></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="help" class="container help">
+      <div class="content__lead">
+        <div class="content">
+          <div class="earth-emoticon--container">
+            <div class="earth-emoticon--animation earth-emoticon--happy"></div>
+          </div>
+          <p>Praesent eleifend felis vel hendrerit varius.</p>
+        </div>
+      </div>
+      <div class="content"> 
+        <div class="layout">
+          <div class="layout__item layout__item--two-thirds">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus, leo eget consectetur mattis, velit eros sodales ipsum, eget pulvinar orci nulla nec est. Nulla cursus convallis sollicitudin. Phasellus accumsan tempor eros vitae rhoncus. Duis rutrum, augue in varius tempor, nulla diam porttitor orci, sit amet gravida magna dui id ex. Aliquam et posuere lectus, ultrices fermentum purus. Sed at ornare est. Vestibulum interdum facilisis tortor, non bibendum diam ultricies sit amet. Nunc vitae urna purus. Vestibulum feugiat egestas dictum. Donec efficitur urna quis arcu pharetra semper. Nullam sit amet vulputate turpis. Curabitur placerat ac erat a ullamcorper. Praesent at nisi at massa rhoncus cursus in nec lacus.</p><a href="" class="btn">Learn More</a>
+          </div>
+          <div class="layout__item layout__item--third"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2016 Scientific data charts data sourced from NASA's data servers</p>
+    </footer>
+  </body>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</html>
